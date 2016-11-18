@@ -1,0 +1,86 @@
+@mixin content($display: block){
+	content:'';
+	display:$display;
+}
+
+@mixin clearfix {
+	&:before,
+	&:after{
+		content:'';
+		display: block;
+	}
+	&:after{
+		clear:both;
+	}
+}
+
+@mixin triangle-up($height, $color : #000) {
+	border-top:none;
+	border-bottom:$height solid $color;
+	border-left:$height solid transparent;
+	border-right:$height solid transparent;
+}
+
+@mixin triangle-up($height, $color : #000) {
+	border-bottom:none;
+	border-top:$height solid $color;
+	border-left:$height solid transparent;
+	border-right:$height solid transparent;
+}
+
+@mixin input-placeholder($color) {
+  &.placeholder { $color; opacity:  1;}
+  &:-moz-placeholder { $color; opacity:  1;}
+  &::-moz-placeholder { $color; opacity:  1;}
+  &:-ms-input-placeholder { $color; opacity:  1;}
+  &::-webkit-input-placeholder { $color; opacity:  1;}
+}
+
+@mixin button {
+    display: inline-block;
+    visibility: top;
+    min-width: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    outline-style: none;
+    white-space: nowrap;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@mixin mq-lg {
+	@media only screen and (max-width: 1023px) {
+		@content;
+	}
+}
+
+@mixin mq-md {
+	@media only screen and (max-width: 767px) {
+		@content;
+	}
+}
+
+@mixin mq-sm {
+	@media only screen and (max-width: 479px) {
+		@content;
+	}
+}
+
+@mixin mq-xs {
+	@media only screen and (max-width: 319px) {
+		@content;
+	}
+}
+
+@mixin mq($rule) {
+	@media only screen and #{$rule} {
+		@content;
+	}
+}

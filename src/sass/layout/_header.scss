@@ -1,0 +1,18 @@
+.topBar{
+	@include clearfix;
+}
+.header{
+	.logo{
+		float: left;
+		&:before{
+			content:'';
+			display:block;
+			position: absolute;
+			@include triangle-up(12px,blue);
+		}
+		img{
+			max-width: 30px;
+			max-height: 30px;
+		}
+	}	
+}
