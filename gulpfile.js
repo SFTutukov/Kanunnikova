@@ -37,6 +37,9 @@ $ npm install --save-dev gulp-concat
 
 Minify images (gulp-image-optimization)
 $ npm install --save-dev gulp-image-optimization
+
+gulp.spritesmith (gulp.spritesmith)
+$ npm intall --save-dev gulp.spritesmith
 */
 
 "use strict";
